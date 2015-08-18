@@ -53,4 +53,4 @@ The results of the command include a 'snapshot_url' which gives us the public UR
 
 A snapshot of your document provides all parties involved with a public link to the document.  The link is stored on a Firebase node which gives all parties realtime access to the document.
 
-The next command, (send\_email)[cmd\_send_email] allows us to email the document to one or more recipients.
+The next command, (send\_email)[send_email.md] allows us to email the document to one or more recipients.

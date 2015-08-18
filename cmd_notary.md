@@ -1,3 +1,0 @@
-# notary command
-
-(todo)

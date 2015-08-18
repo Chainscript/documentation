@@ -291,7 +291,7 @@ After a document has been been initalized, we can modify it with the 'update: {}
 
 By using Chainscript, multiple parties can interact with a document or contract with fully transparent audit trail.
 
-In the next section, we will introduce Chainscript's (Snapshot Command)[cmd_snapshot.md].
+In the next section, we will introduce Chainscript's (Snapshot Command)[commands/snapshot.md].
 
 
 
