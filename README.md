@@ -42,7 +42,7 @@ Envelopes can be used to hold other envelopes like documents, contracts, profile
 
 ```JSON
 {
-    "contract" : {
+    "document" : {
       "title" : "Transfer of Ownership",
       "buyer" : "ACME Inc",
       "seller" : "John's Garage",
@@ -135,7 +135,12 @@ Copy and paste the script above into the execution window from the agent and cli
 }
 ```
 
-The agent returns a new file that transformed the document's arguments, "Welcome to Chainscript!", into a document with a content and x\_meta key.  An additional key, named 'x_chainscript' was added to establish an audit trail for our document.  
+The agent returns a new file that transformed the document's arguments, "Welcome to Chainscript!", into a document with a content and x\_meta key.  
+
+> It is highly advised to keep all custom or user defined data in 'document/content'.  Agents may append or include various key/pairs within the document.  Organizing your data within content will help to prevent key/value conflicts.
+
+An additional key, named 'x_chainscript' was added to establish an audit trail for our document.  Agents use this key to keep information about the commands processed and the revisions made.
+
 
 ## Audit Trails
 
