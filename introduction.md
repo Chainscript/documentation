@@ -1,18 +1,17 @@
                         
 # Chainscript Introduction
 
-Chainscript is an easy to use scripting langauge for writing, executing and verifing smart contracts.  It is written with JSON to make it easy for both humans and machines to process.
+Chainscript is a simple language written in JSON.  JSON, which stands for Javascript Object Notation, is an interchangeable format widely used on the internet today.  It is easy for humans to read and write and easy for machines to parse and generate.  
 
-Chainscript smart contracts are transaparent, auditable and immutable.  The script is designed to be freely shared and executed by "agents".  Chainscript agents execute chainscript commands and return the results.  The results from an agent should always be verifiyable by public sources such as blockchain and bittorent. 
-
-Chainscript is designed to accomodate contracts containing assets, profiles, accounts, events and more.  The scripts can be extended to include other types of information and commands.  Specific interactions with the contract can be authorized entities holding a private key.
-
-For this introduction, we will become familiar with the basics of Chainscript.
+The format is used by Chainscript to combine both commands and data into one document.  
 
 ## Envelopes
 
-In Chainscript, we always start with the "envelope"
+Every Chainscript file starts with an envelope:
+
+```JSON
 envelope = {}
+```
 
 // The envelope below is holding a "key/value" pair.  Keys are always listed 
 // within quotes.  A colon is used to separate the key and value.
