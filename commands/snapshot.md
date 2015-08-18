@@ -1,6 +1,6 @@
 # snapshot Command
 
-The snapshot command is used to publish a public copy of your document.  As multiple parties may be involved, a snapshot of the document can be made to keep everyone in sync.  The offical agent publishes snapshots to a (Firebase)[http://firebase.com] node so that all parties can have realtime updates of snapshots for a given document.
+The snapshot command is used to publish a public copy of your document.  As multiple parties may be involved, a snapshot of the document can be made to keep everyone in sync.  The offical agent publishes snapshots to a [Firebase](http://firebase.com) node so that all parties can have realtime updates of snapshots for a given document.
 
 ## Executing
 
