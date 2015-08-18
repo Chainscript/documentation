@@ -132,7 +132,12 @@ The agent returns a new file that transformed the document's arguments, "Welcome
 
 ## Audit Trails
 
-Chainscript envelopes contain meta data on the document to track changes.  Two important mechanisms are used for creating an audit trail.  The first is the unique identifier.  Notice how in the document above a 'uuid' was generated and added to the 'x_meta' key:
+Chainscript envelopes contain meta data on the document to track changes.  Two important mechanisms are used for creating an audit trail.  
+
+
+### Unique Identifiers
+
+The first is the unique identifier.  Notice how in the document above a 'uuid' was generated and added to the 'x_meta' key:
 
 ```JSON
    "x_meta": {
@@ -146,9 +151,14 @@ The unique identifier, or uuid, is composed of 3 parts:
 chainscript : document : 0c7c3b96-61d4-4a86-82f1-0d7e5fc06783
 ```
 
-The three parts tells us that this identifer belongs to a Chainscript document with an ID of 0c7c3b96-61d4-4a86-82f1-0d7e5fc06783.  The x_meta section is managed by Chainscript agents and should not be modifed by hand.  As agents execute your code, they could add or modify this section.
+The three parts tells us that this identifer belongs to a Chainscript document with an ID of 0c7c3b96-61d4-4a86-82f1-0d7e5fc06783.  
 
-With a unique identifier, all parties invovled with a document and/or contract can locate their contract.
+The x_meta section is managed by Chainscript agents and should not be modifed by hand.  As agents execute your code, they could append or modify this section.
+
+With a unique identifier, all parties invovled can locate and identift their document.
+
+
+### Digests
 
 The second mechanism that is used to verify an document's audit trail is the 'digest'.  A digest is a cryptographic representation of a document.  Given the same set of data, the function will return the same digest.  However, if any piece of information has been modified, the digest will be completely different.  
 
@@ -163,11 +173,6 @@ Let's look at an example.  Compare the digest from the two documents below:
     }
   },
   "x_chainscript": {
-    "validation": {
-      "result": "valid",
-      "validated_on": "2015-08-18T16:22:29+00:00",
-      "message": "Warning, executing envelope without command"
-    },
     "digest": "a8d5256a1a721c100e3db0b5065652535f7e6699"
   }
 }
@@ -182,11 +187,6 @@ Let's look at an example.  Compare the digest from the two documents below:
     }
   },
   "x_chainscript": {
-    "validation": {
-      "result": "valid",
-      "validated_on": "2015-08-18T16:37:19+00:00",
-      "message": "Warning, executing envelope without command"
-    },
     "digest": "c65943f11b70f582a506caf8251701a800d76975"
   }
 }
@@ -194,7 +194,7 @@ Let's look at an example.  Compare the digest from the two documents below:
 
 In the first document we have the content "Hello Chainscript!" with an uppercase 'C'.  In the second document we have the content "Hello chainscript!" with a lowercase 'c'.  Comparing the two digests we can see two radically different numbers.
 
-To update a document, we issue a command to an agent to perform the operation.  Using the first example above, we'll add the 'update' command to the top of the file:
+To update a document, we can issue a command to an agent to perform the operation.  Using the first example above, we'll add the 'update' command to the top of the file:
 
 ```JSON
 {
@@ -225,20 +225,7 @@ When executed by the agent we get some new information added to our document:
     },
     "x_meta": {
       "uuid": "chainscript:document:0c7c3b96-61d4-4a86-82f1-0d7e5fc06783",
-      "revision": 1,
-      "previous_digest": "a8d5256a1a721c100e3db0b5065652535f7e6699",
-      "revisions": [
-        {
-          "revision": 1,
-          "previous_digest": "a8d5256a1a721c100e3db0b5065652535f7e6699",
-          "revised_on": "2015-08-18T16:41:59+00:00",
-          "content": {
-            "title": "Welcome to Chainscript!",
-            "information": "The developer friendly way to write, execute and verify smart contracts"
-          },
-          "previous_content": "Welcome to Chainscript!"
-        }
-      ]
+      "previous_digest": "a8d5256a1a721c100e3db0b5065652535f7e6699"
     }
   },
   "x_chainscript": {
@@ -246,18 +233,7 @@ When executed by the agent we get some new information added to our document:
       "result": "success",
       "validated_on": "2015-08-18T16:41:59+00:00"
     },
-    "digest": "4170db2fcdad8c4eb59f5969b9af63f6010828d6",
-    "command_log": [
-      {
-        "command": "update",
-        "arguments": {
-          "title": "Welcome to Chainscript!",
-          "information": "The developer friendly way to write, execute and verify smart contracts"
-        },
-        "executed_on": "2015-08-18T16:41:59+00:00",
-        "document_digest": "9f688e65730d09b6b908ddc89c3ddd50b22e740c"
-      }
-    ]
+    "digest": "4170db2fcdad8c4eb59f5969b9af63f6010828d6"
   }
 }
 ```
@@ -301,18 +277,23 @@ The agent returns:
 }
 ```
 
-Notice in x_chainscript/validation the 'result' and 'message' key tells us that there's been a modification against the digest.
+## History and Revisions
+
+(TODO: write about revision history and command logs)
 
 ## Summary
 
-Chainscript files contain one envelope which must contain one document.  Inside the document we can key/value pairs to represent different kinds of document, contracts or publish various types of information.
+Chainscript files contain one envelope which must contain one document.  Inside the document we can key/value pairs to represent different kinds of document, contracts or publish various types of structured information.
 
-Agents execute Chainscript files and process commands.  The root command, 'document: {}', initalizes a new document for us with a unique identifier and digest for establishing an audit trail.
+Agents execute Chainscript files and process commands.  The root command, 'document: {}', initalizes a new document for us with a unique identifier and digest for establishing an audit trail.  Parties can agree to use the official agent or implement their own.
 
-After it's been initalized, we can update our document with the 'update: {}' command.  The agent will handle the processing of the digest, revision history and command log.
+After a document has been been initalized, we can modify it with the 'update: {}' command.  When validated and processed by an agent the new change will be merged, including the previous digest, and a new digest will be computed.
 
-Next section, we will introduce a few more commands.
-(Basic Commands)[commands.md]
+By using Chainscript, multiple parties can interact with a document or contract with fully transparent audit trail.
+
+In the next section, we will introduce Chainscript's (Snapshot Command)[cmd_snapshot.md].
+
+
 
 
 
