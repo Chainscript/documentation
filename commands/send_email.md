@@ -55,4 +55,4 @@ The results of the command can be verified by the 'x_chainscript/validation/resu
 
 The send_email command allows you to quickly email the document.
 
-The next command, (execute)[commands/execute.md] allows us to execute a list of commands.
+The next command, [execute](execute.md) allows us to execute a list of commands.
