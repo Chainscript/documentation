@@ -6,13 +6,16 @@
 
 ```JSON
 {
-		"document": "hello world",
-		"execute": [
-			{"snapshot": {}}, 
-			{"update": { "terms": "agree to price" }}, 
-			{"update": { "conditions": "pay upon delivery"}},
-		]
+	"document": "Empty contract",
+	"execute": {
+		"0": {"snapshot": { }},
+		"1": {
+			"update": { 
+				"title": "Sample Contract",
+				"conditions": "pay upon delivery"}},
+		"2": {"send_email": {"test@localhost"}}
 	}
+}
 ```
 
 ## Summary
