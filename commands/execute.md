@@ -13,7 +13,7 @@
 			"update": { 
 				"title": "Sample Contract",
 				"conditions": "pay upon delivery"}},
-		"2": {"send_email": {"test@localhost"}}
+		"2": {"send_email": {"to": "test@localhost"}}
 	}
 }
 ```
