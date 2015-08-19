@@ -2,6 +2,18 @@
 
 (todo)
 
+## Execute
+
+```JSON
+{
+		"document": "hello world",
+		"execute": [
+			{"snapshot": {}}, 
+			{"update": { "terms": "agree to price" }}, 
+			{"update": { "conditions": "pay upon delivery"}},
+		]
+	}
+```
 
 ## Summary
 
