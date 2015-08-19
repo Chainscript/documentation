@@ -9,10 +9,7 @@ Broadcast requires an "x_transaction" attachment describing the transaction to b
 ```JSON
 {
   "document": {
-    "content": "Hello World!",
-    "x_meta": {
-      "uuid": "chainscript:document:cd9b2913-da55-47b7-8d2e-7e00037eea54"
-    }
+    "content": "Hello World!"
   },
   "x_transaction": {
     "encoded_hex": "0100000001bb19a19be8b....",
