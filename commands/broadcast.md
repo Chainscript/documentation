@@ -4,6 +4,8 @@
 
 ## execute
 
+Broadcast requires an "x_transaction" attachment describing the transaction to be broadcasted.
+
 ```JSON
 {
   "document": {
