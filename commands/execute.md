@@ -8,12 +8,20 @@ The execute command accepts a list of command to be executed in order.
 {
 	"document": "Empty contract",
 	"execute": {
-		"0": {"snapshot": { }},
+		"0": {
+			"snapshot": {}
+		},
 		"1": {
 			"update": { 
 				"title": "Sample Contract",
-				"conditions": "pay upon delivery"}},
-		"2": {"send_email": {"to": "test@localhost.com"}}
+				"conditions": "pay upon delivery"
+			}
+		},
+		"2": {
+			"send_email": {
+				"to": "test@localhost.com"
+			}
+		}
 	}
 }
 ```
