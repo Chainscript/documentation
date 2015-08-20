@@ -6,14 +6,14 @@
 
 ```JSON
 	{
-		"document" : "My contract title.",
+		"document" : "A contract.",
 		"add_event" : {
 			"type" : "chainscript/check-datetime",
 			"conditions" : { 
 				"expires_in_minutes_from_now" : -15
 			},
 			"execute" : {
-				"0": {"update" : "My contract title: EXPIRED!"},
+				"0": {"update" : "An EXPIRED contract."},
 				"1": {"snapshot" : {}},
 				"2": {"send_email" : {"to" : "caetano@gmail.com"}}
 			}
