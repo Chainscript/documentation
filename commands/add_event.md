@@ -13,9 +13,9 @@
 				"expires_in_minutes_from_now" : -15
 			},
 			"execute" : [
-				{"update" : "My contract title: EXPIRED!"},
-				{"snapshot" : {}},
-				{"send_email" : {"to" : "caetano@gmail.com"}}
+				"0": {"update" : "My contract title: EXPIRED!"},
+				"1": {"snapshot" : {}},
+				"2": {"send_email" : {"to" : "caetano@gmail.com"}}
 			]
 		},
 		"x_chainscript" : {
