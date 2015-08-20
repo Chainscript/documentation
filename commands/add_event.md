@@ -2,9 +2,12 @@
 
 The add_event command attaches specific conditions that when met execute a list of commands.  Example events can include expiration based on date/time, the balance of a bitcoin address or the deliver of a packaged by a shipping carrier.  
 
-Trusted agents, which implement the event machines, are responsible for implementing events.  In this case, agents are similar to the idea of an [oracle](https://github.com/orisi/wiki/wiki/Orisi-White-Paper).
+## Agents
+Trusted agents, who represent the event machines, are responsible for implementing events.  The parties involved can decided on which agents to trust.  Agents function in role similar to [oracles](https://github.com/orisi/wiki/wiki/Orisi-White-Paper).
 
-# Execute
+Agents can choose to sign and publish evidence of the event by [notarizing](./notarize.md) it on a blockchain.
+
+## Execute
 
 At the minimum, the add_event command requires a type, a set of conditions and a list of commands:
 
