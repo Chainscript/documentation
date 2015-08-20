@@ -206,6 +206,8 @@ Let's look at an example.  Compare the digest from the two documents below:
 
 In the first document we have the content "Hello Chainscript!" with an uppercase 'C'.  In the second document we have the content "Hello chainscript!" with a lowercase 'c'.  Comparing the two digests we can see two radically different numbers.
 
+### Updates
+
 To update a document, we can issue a command to an agent to perform the operation.  Using the first example above, we'll add the 'update' command to the top of the file:
 
 ```JSON
