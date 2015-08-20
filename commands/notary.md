@@ -2,6 +2,13 @@
 
 (todo)
 
+## Execute
+
+```JSON
+{
+  "document: "My unique text",
+  "notarize": {}
+}
 
 ## Summary
 
