@@ -6,7 +6,7 @@
 
 ```JSON
 {
-  "document: "My unique text",
+  "document": "My unique text",
   "notarize": {}
 }
 
