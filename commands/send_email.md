@@ -1,4 +1,4 @@
-# send_email command
+# Send Email (send_email)
 
 The send_email command can be used to automatically email the document to a list of recipients.
 
@@ -50,9 +50,3 @@ The results of the command can be verified by the 'x_chainscript/validation/resu
   }
 }
 ```
-
-## Summary
-
-The send_email command allows you to quickly email the document.
-
-The next command, [execute](execute.md) allows us to execute a list of commands.
