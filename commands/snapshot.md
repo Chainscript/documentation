@@ -1,4 +1,4 @@
-# snapshot Command
+# Snapshots (snapshot)
 
 The snapshot command is used to publish a public copy of your document.  As multiple parties may be involved, a snapshot of the document can be made to keep everyone in sync.  The offical agent publishes snapshots to a [Firebase](http://firebase.com) node so that all parties can have realtime updates of snapshots for a given document.
 
@@ -49,8 +49,6 @@ The results of the command include a 'snapshot_url' which gives us the public UR
 }
 ```
 
-## Summary
+## Tags
 
-A snapshot of your document provides all parties involved with a public link to the document.  The link is stored on a Firebase node which gives all parties realtime access to the document.
-
-The next command, [send_email](send_email.md) allows us to email the document to one or more recipients.
+Snapshots can include a tag.  Tagging a snapshot allows for mulitple snapshots at a specific datetime to be keep as a reference.
