@@ -3,9 +3,9 @@
 The add_event command attaches specific conditions that when met execute a list of commands.  Example events can include expiration based on date/time, the balance of a bitcoin address or the deliver of a packaged by a shipping carrier.  
 
 ## Agents
-Trusted agents, who represent the event machines, are responsible for implementing events.  The parties involved can decided on which agents to trust.  Agents function in role similar to [oracles](https://github.com/orisi/wiki/wiki/Orisi-White-Paper).
+Trusted agents, who represent the event machines, are responsible for implementing events.  The parties involved with the document can decided on which agents to trust.
 
-Agents can choose to sign and publish evidence of the event by [notarizing](notarize.md) it on a blockchain.
+Agents can choose to sign and publish evidence of the event by [notarizing](notarize.md) it on a blockchain.  Agents function in a  role similar to [oracles](https://github.com/orisi/wiki/wiki/Orisi-White-Paper).
 
 ## Execute
 
@@ -51,12 +51,8 @@ Once executed by an agent, the envelope is updated with some additional fields:
             "greater_than": "2015-08-20T15:21:41+00:00"
           },
           "execute": {
-            "0": {
-              "update": "An EXPIRED contract."
-            },
-            "1": {
-              "snapshot": {}
-            },
+            "0": {  "update": "An EXPIRED contract." },
+            "1": {  "snapshot": {} },
             "2": {
               "send_email": {
                 "to": "caetano@gmail.com"
@@ -86,10 +82,57 @@ Once executed by an agent, the envelope is updated with some additional fields:
 }
 ```
 
-### Events list
+### Event Types
+
+The official Chainscript agent implements the following event types:
+
+#### chainscript/check-datetime
+
+Greater than/less than conditions against date/time:
+
+```JSON
+"add_event" : {
+	"type" : "chainscript/check-datetime",
+	"conditions" : { 
+		"greater_than" : "2015-08-20T17:13:42+02:00",
+		"less_than" : "2015-08-20T17:13:42+02:00",
+	},
+	"execute" : {}
+}
+```
+
+Or an expiration date/time in mins, hours or days:
+
+```JSON
+"conditions" : { 
+	"expires_in_minutes_from_now" : 120,
+	"expires_in_hours_from_now" : 12,
+	"expires_in_days_from_now" : 30,
+}
+```
+
+### Events List
 
 The events are added to the document/x_attachments/events key.  Notice in the results from above that the digest is recorded and the status is set to pending.  Agents should respect the digest and insure that the commands executed are executed against a matching digest.
 
+### Snapshots
+
+A snapshot of the original event is kept as a reference point.  The URL of the snapshot is provided by the agent.
+
+A document snapshot command can be included in the list of commands to be executed:
+
+```JSON
+    "execute": {
+        "0": {  "update": "An EXPIRED contract." },
+        "1": {  "snapshot": {} }
+    }
+```
+
+### Event Processing
+
+The agent maintains a backend process to continuously check for the conditions of each event.  If the conditions are met, the commands are executed.
+
+Upon successful execution, the status of the event is updated to "success".  The results are posted to the event's snapshot.
 
 
 
