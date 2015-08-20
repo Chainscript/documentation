@@ -9,6 +9,7 @@
   "document": "My unique text",
   "notarize": {}
 }
+```
 
 ## Summary
 
