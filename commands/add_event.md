@@ -5,7 +5,7 @@ The add_event command attaches specific conditions that when met execute a list 
 ## Agents
 Trusted agents, who represent the event machines, are responsible for implementing events.  The parties involved with the document can decided on which agents to trust.
 
-Agents can choose to sign and publish evidence of the event by [notarizing](notarize.md) it on a blockchain.  Agents function in a  role similar to [oracles](https://github.com/orisi/wiki/wiki/Orisi-White-Paper).
+Agents can choose to sign and publish evidence of the event by [notarizing](notarize.md) it on a blockchain.  Agents function in a  role similar to [oracles](https://github.com/orisi/wiki/wiki/Mastering-Distributed-Oracles).
 
 ## Execute
 
