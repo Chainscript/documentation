@@ -1,6 +1,6 @@
 # Add Event (add_event)
 
-The add_event command sets an event on specific conditions, that when met execute a list of commands.  Example events can include expiration based on date/time, the balance of a bitcoin address or the deliver of a packaged by a shipping carrier.  
+The add_event command sets an event on specific conditions, that when met execute a list of commands.  Example events can include expiration based on date/time, the balance of a bitcoin address or the delivery of a packaged by a shipping carrier.  
 
 Events are executed by abstract event machines.  Event machines assumes a trusted source of information.  Event machines are transparent and publish their results to public sources: blockchain, bittorrent, etc.
 
