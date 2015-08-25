@@ -297,14 +297,14 @@ The agent returns:
 
 ## Commands
 
-[Add Events (add_event)](commands/add_event.md)
-[Broadcast a Transaction (broadcast)](commands/broadcast.md)
-[Build a Transaction (build_transaction)](commands/build_transaction.md)
-[Execute List of Commands (execute)](commands/execute.md)
-[Make Account (make_account)](commands/make_account.md)
-[Notarize (notarize)](commands/notarize.md)
-[Send Email (send_email)](commands/send_email.md)
-[Snapshot (snapshot)](commands/snapshot.md)
+* [Add Events (add_event)](commands/add_event.md)
+* [Broadcast a Transaction (broadcast)](commands/broadcast.md)
+* [Build a Transaction (build_transaction)](commands/build_transaction.md)
+* [Execute List of Commands (execute)](commands/execute.md)
+* [Make Account (make_account)](commands/make_account.md)
+* [Notarize (notarize)](commands/notarize.md)
+* [Send Email (send_email)](commands/send_email.md)
+* [Snapshot (snapshot)](commands/snapshot.md)
 
 
 
