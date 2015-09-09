@@ -1,6 +1,6 @@
 # Digital Assets
 
-# Issue an Asset
+## Issue an Asset
 
 Assets can be easily created using the asset_create command.  
 Assets are created using the Colored Coins protocol but others will be implemented.
@@ -31,7 +31,7 @@ Possible asset types:
 ```
 
 
-# Transfer an Asset
+## Transfer an Asset
 
 ```JSON
 "asset_transfer" : {
@@ -41,7 +41,7 @@ Possible asset types:
 }
 ```
 
-# Get latest holders
+## Get latest holders
 
 Chainscript agent can update the asset in the document with the current list of asset holders.
 
