@@ -30,6 +30,66 @@ Possible asset types:
 }
 ```
 
+The chainscript agent will return:
+
+```JSON
+{
+  "document": {
+    "content": "My First Digital Asset",
+    "x_attachments": {
+      "asset": {
+         "uuid" : "chainscript:asset:coloredcoins:LD8cVe1Ms62QcRMd8kZngpoS8atgbrLWTg3NB",
+         "address": "mxWmN9fq7jz5wktqVDoJAMuHYeqtdYirhn",
+         "type": "asset/item",
+         "protocol": "testnet3/coloredcoins"
+      }
+   },
+   "x_transaction": {
+      "encoded_hex": "0100000001881aba7004ad2ba5...",
+      "status": "unsigned",
+      "blockchain": "testnet3",
+      "asset": "chainscript:asset:coloredcoins:LD8cVe1Ms62QcRMd8kZngpoS8atgbrLWTg3NB"
+   }
+}
+```
+
+The client will then need to sign the encoded transaction with 'bitcoinjs-lib'.  The result will then be sent using the 'broadcast' command:
+
+```JSON
+{
+  "document": {...},
+  "broadcast": {},
+  "x_transaction": {
+      "encoded_hex": "0100000001881aba7004ad2ba5...",
+      "status": "signed",
+      "blockchain": "testnet3",
+      "asset": "chainscript:asset:coloredcoins:LD8cVe1Ms62QcRMd8kZngpoS8atgbrLWTg3NB"
+   }
+}
+```
+
+After the broadcast command the result:
+
+```JSON
+{
+  "document": {
+    "content": "My First Digital Asset",
+    "x_attachments": {
+      "asset": {
+         "uuid" : "chainscript:asset:coloredcoins:LD8cVe1Ms62QcRMd8kZngpoS8atgbrLWTg3NB",
+          "address": "mxWmN9fq7jz5wktqVDoJAMuHYeqtdYirhn",
+          "type": "asset/item",
+          "protocol": "testnet3/coloredcoins",
+          "evidence": "chainscript:tx:testnet3:d2963888d729b22b25dfe18e67e0...",
+          "holders": {
+             "mxWmN9fq7jz5wktqVDoJAMuHYeqtdYirhn": 1
+          }
+      }
+   }
+}
+```
+
+
 
 ## Transfer an Asset
 
