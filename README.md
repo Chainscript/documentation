@@ -295,6 +295,65 @@ The agent returns:
 
 (TODO: write about revision history and command logs)
 
+Command loggin and revision history are both available by enabling them in the x_chainscript key as properties:
+
+```JSON
+{
+	"document": "Hello Chainscript!",
+	"update": "Goodbye!",
+	"x_chainscript" : {
+		"snapshots_enabled" : true,
+		"command_auditing" : true,
+		"revision_auditing" : true
+	}
+}
+```
+
+When executed, the results are:
+
+```JSON
+
+{
+  "document": {
+    "content": "Goodbye!",
+    "x_meta": {
+      "uuid": "chainscript:document:1cda4e8e-de45-4ac9-9703-c768d95b8b1c",
+      "revision": 1,
+      "previous_digest": "0c2ace30a5ddc13c8ab18e22c832b85d0b429e0c",
+      "revisions": {
+        "1442247400181": {
+          "previous_content": "Hello Chainscript!",
+          "revision": 1,
+          "previous_digest": "0c2ace30a5ddc13c8ab18e22c832b85d0b429e0c",
+          "revised_on": "2015-09-14T16:16:40+00:00"
+        }
+      }
+    }
+  },
+  "x_chainscript": {
+    "snapshots_enabled": true,
+    "command_auditing": true,
+    "revision_auditing": true,
+    "validation": {
+      "agent": "io.chainscript.agent",
+      "version": "0.1.alpha",
+      "result": "success",
+      "validated_on": "2015-09-14T16:16:40+00:00"
+    },
+    "digest": "d94c26821387e2799ed65f777f2191c45edd14f4",
+    "command_history": {
+      "1442247400182": {
+        "command": "update",
+        "arguments": "Goodbye!",
+        "executed_on": "2015-09-14T16:16:40+00:00",
+        "digest": "e01c513e03e672e518022df1240f2b497121964f"
+      }
+    },
+    "snapshot_url": "https://chainscript.firebaseio.com/snapshots/chainscript-document-1cda4e8e-de45-4ac9-9703-c768d95b8b1c.json"
+  }
+}
+```
+
 ## Commands
 
 * [Add Events (add_event)](commands/add_event.md)
