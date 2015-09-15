@@ -405,7 +405,7 @@ To play another round, any player can issue the "start_round" command:
 
 ```JSON
 {
-	"start_round" : {}
+	"shuffle" : {}
 }
 ```
 
