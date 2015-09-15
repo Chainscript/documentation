@@ -206,7 +206,7 @@ With the first two players ante'd up the dealer shuffles and deals out the cards
           	"nickname": "mary007",
           	"withdraw_address": "mL1J8Pmvw1qK4XZSgictSZsLDiseag9BQk",
           	"public_key": "cdc9a473dac18987928ce893bbfd29649f9bbeec5603cb972b336c9d1b675db37f",
-          	"deposit_address": "msLDiseag9BL1J8Pmvwt1qK4XZSgicQkSZ"
+          	"deposit_address": "msLDiseag9BL1J8Pmvwt1qK4XZSgicQkSZ",
 	      	"bet" : 2,
 	      	"hand" : "dDQphc2RmDQpYXNkZnNhc2Q"
         },
@@ -214,7 +214,7 @@ With the first two players ante'd up the dealer shuffles and deals out the cards
           "nickname": "thedude",
           "withdraw_address": "mag9BL1J8Pmvw1qK4XZtSZsLDiseSgicQk",
           "public_key": "2b336c9d1b675db37fcdc9a473dac189879203cb978ce893bbfd29649f9bbeec56",
-          "deposit_address": "mt1qK4XZSgicQkSZsLDiseag9BL1J8Pmvw"
+          "deposit_address": "mt1qK4XZSgicQkSZsLDiseag9BL1J8Pmvw",
 	      "bet" : 0,
 	      "hand" : "QpYXNkZnNdDQphc2RmDhc2Q"
         },
@@ -222,7 +222,7 @@ With the first two players ante'd up the dealer shuffles and deals out the cards
           "nickname": "heyjesus",
           "withdraw_address": "mseag9BL1J8Pmvw1qtSZsLDiK4XZSgicQk",
           "public_key": "a473dac18987928ce893b03cb972b336c9d1b675db37fcdc9bfd29649f9bbeec56",
-          "deposit_address": "mt1qK4XZSgicQkSZsLDiseag9BL1J8Pmvw"
+          "deposit_address": "mt1qK4XZSgicQkSZsLDiseag9BL1J8Pmvw",
 	      "bet" : 0,
 	      "hand" : "DQpYXNkZndDQphc2RmNhc2Q"
         }        
