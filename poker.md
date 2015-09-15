@@ -34,12 +34,12 @@ A deck of cards, or a hand, is represented by a comma deliminted string:
 ```
 
 
-## Join a Table
+## Open a Table
 Players join a table by providing their public keys.  Public keys are needed by the Dealer Agent to issue a secured deck of cards
 
 ```JSON
 {
-	"join_table" : {
+	"open_table" : {
 		"title" : "Cryptographic World Series of Poker",
 		"game" : "poker/5-card-draw",
 		"bet_min" : 2,
