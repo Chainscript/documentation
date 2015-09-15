@@ -233,7 +233,7 @@ With the first two players ante'd up the dealer shuffles and deals out the cards
 		"description" : "Player Check or Bet?",
 		"current_player" : 2,
 		"min_bet" : 0,
-		"deck" : "YXNkZnNdDQphc2RmDQphc2QNCmFzZA0KZmFzZA0KZmFkcw0KZnNhZY..."
+		"deck" : "YXNkZnNdDQphc2RmDQphc2QNCmFzZA0KZmFzZA0KZmFkcw0KZnNhZY...",
 		"deck_index" : 20
 	},
 	"x_meta": {
@@ -258,7 +258,7 @@ After the ante, the players are requested to place their bets:
 		"description" : "Player Check or Bet?",
 		"current_player" : 2,
 		"min_bet" : 0,
-		"deck" : "YXNkZnNdDQphc2RmDQphc2QNCmFzZA0KZmFzZA0KZmFkcw0KZnNhZY..."
+		"deck" : "YXNkZnNdDQphc2RmDQphc2QNCmFzZA0KZmFzZA0KZmFkcw0KZnNhZY...",
 		"deck_index" : 20
 	},
 	"x_meta": {
@@ -389,7 +389,7 @@ After the play player's bet the results are published:
 		"round" : 1,
 		"pot_amount" : 30,
 		"description" : "Player 0 won 20 units",
-		"deck" : "YXNkZnNdDQphc2RmDQphc2QNCmFzZA0KZmFzZA0KZmFkcw0KZnNhZY..."
+		"deck" : "YXNkZnNdDQphc2RmDQphc2QNCmFzZA0KZmFzZA0KZmFkcw0KZnNhZY...",
 		"deck_index" : 29,
 		"deck_remaining" : "4D,8D,2C,AS,9C,3D,JH,3D,9C,7S..."
 	},
