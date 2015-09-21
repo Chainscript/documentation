@@ -16,7 +16,7 @@ Possible asset types:
 
 ```JSON
 {
-  "document": "My First Digital Asset",
+  "content": "My First Digital Asset",
   "asset_create": {
     "address": "mxWmN9fq7jz5wktqVDoJAMuHYeqtdYirhn",
     "type": "asset/item",
@@ -34,7 +34,7 @@ The chainscript agent will return:
 
 ```JSON
 {
-  "document": {
+  "body": {
     "content": "My First Digital Asset",
     "x_attachments": {
       "asset": {
@@ -57,7 +57,7 @@ The client will then need to sign the encoded transaction with 'bitcoinjs-lib'. 
 
 ```JSON
 {
-  "document": {...},
+  "body": {...},
   "broadcast": {},
   "x_transaction": {
       "encoded_hex": "0100000001881aba7004ad2ba5...",
@@ -72,7 +72,7 @@ After the broadcast command the result:
 
 ```JSON
 {
-  "document": {
+  "body": {
     "content": "My First Digital Asset",
     "x_attachments": {
       "asset": {
