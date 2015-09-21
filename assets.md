@@ -22,10 +22,6 @@ Possible asset types:
     "type": "asset/item",
     "quantity": 1,
     "protocol": "testnet3/coloredcoins"
-  },
-  "x_chainscript": {
-    "disable_command_log": true,
-    "disable_revision_history": true
   }
 }
 ```
