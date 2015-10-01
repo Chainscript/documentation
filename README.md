@@ -1,6 +1,6 @@
 # Chainscript
 
-Chainscript is an easy to use scripting langauge for writing, executing and verifing smart workflows.  A workflow is defined as a process which involves one or more actors.  The actors share chainscript which defines and execute each step of the process.  After each step is executed, the chainscript is updated to reflect the current state of the process.
+Chainscript is an easy to use scripting langauge for writing, executing and verifing blockchain applications.  A workflow is defined as a process which involves one or more actors.  The actors share chainscript which defines and execute each step of the process.  After each step is executed, the chainscript is updated to reflect the current state of the process.
 
 ## Overview
 
